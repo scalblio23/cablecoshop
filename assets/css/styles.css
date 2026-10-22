@@ -46,12 +46,8 @@ h1, h2, h3, h4, h5 { margin: 0; font-weight: 500; letter-spacing: -0.01em; }
 
 .site-header { position: sticky; top: 0; z-index: 40; background: rgba(250,249,251,.92); backdrop-filter: blur(10px); border-bottom: 1px solid var(--line); }
 .header-inner { display: flex; align-items: center; gap: 24px; height: 72px; }
-.logo { display: inline-flex; align-items: center; gap: 4px; }
-.logo-word { font-weight: 700; font-size: 26px; letter-spacing: -0.04em; color: var(--navy); }
-.logo-mark { width: 38px; height: 19px; }
-.logo-tag { margin-left: 6px; font-size: 10px; font-weight: 700; letter-spacing: .2em; text-transform: uppercase; color: var(--purple); border: 1px solid currentColor; border-radius: 4px; padding: 2px 5px; }
-.logo-light .logo-word { color: #fff; }
-.logo-light .logo-tag { color: #e9a5c0; }
+.logo { display: inline-flex; align-items: center; }
+.logo img { width: 150px; height: auto; }
 
 .main-nav { display: flex; gap: 32px; margin: 0 auto; }
 .main-nav a { font-size: 13px; font-weight: 500; letter-spacing: .1em; text-transform: uppercase; color: var(--muted); }
@@ -234,7 +230,7 @@ h1, h2, h3, h4, h5 { margin: 0; font-weight: 500; letter-spacing: -0.01em; }
   .menu-toggle { display: grid; }
   .header-inner { gap: 8px; height: 64px; }
   .logo { margin-right: auto; }
-  .logo-word { font-size: 22px; }
+  .logo img { width: 124px; }
   .main-nav { position: fixed; top: 64px; left: 0; right: 0; flex-direction: column; gap: 0; background: #fff; border-bottom: 1px solid var(--line); padding: 8px 16px; transform: translateY(-8px); opacity: 0; visibility: hidden; transition: .2s; z-index: -1; }
   .menu-open .main-nav { transform: none; opacity: 1; visibility: visible; }
   .main-nav a { padding: 14px 0; border-bottom: 1px solid var(--line); }
