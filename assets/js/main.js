@@ -46,7 +46,7 @@
 
   const projects = [
     { title: "10.2kWh battery retrofit · Newcastle NSW", product: "pc-10", bg: "#ece6f4" },
-    { title: "Hybrid inverter + 13.5kWh · Gold Coast QLD", product: "pc-135", bg: "#e4e8f3" },
+    { title: "Hybrid inverter + 13.5kWh · Gold Coast QLD", product: "pc-135", bg: "#fbe6ec" },
     { title: "7kW EV charger install · Adelaide SA", product: "ev-7", bg: "#e7eef9" }
   ];
   $("[data-projects]").innerHTML = projects.map((pr, i) => {
