@@ -1,0 +1,166 @@
+<!doctype html>
+<html lang="en-AU">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Checkout | Cable Co Shop</title>
+  <meta name="robots" content="noindex">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:opsz,wght@9..40,300;9..40,400;9..40,500;9..40,700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/assets/css/styles.css">
+</head>
+<body class="checkout-page">
+
+  <header class="co-header">
+    <div class="container co-header-inner">
+      <a href="/" class="logo logo-light" aria-label="Cable Co Shop home">
+        <span class="logo-word">cable</span>
+        <svg class="logo-mark" viewBox="0 0 44 22" aria-hidden="true"><defs><linearGradient id="lg" x1="0" x2="1"><stop offset="0" stop-color="#6b4c9a"/><stop offset="1" stop-color="#e8456b"/></linearGradient></defs><circle cx="13" cy="11" r="8" fill="none" stroke="url(#lg)" stroke-width="3"/><circle cx="31" cy="11" r="8" fill="none" stroke="url(#lg)" stroke-width="3"/></svg>
+        <span class="logo-tag">shop</span>
+      </a>
+      <span class="co-secure"><svg viewBox="0 0 24 24"><rect x="5" y="11" width="14" height="10" rx="2"/><path d="M8 11V8a4 4 0 0 1 8 0v3"/></svg>Secure checkout</span>
+    </div>
+  </header>
+
+  <main class="container co-main">
+    <a href="/" class="co-back">← Continue shopping</a>
+
+    <!-- Empty cart -->
+    <section class="co-empty" data-empty hidden>
+      <h1>Your cart is empty</h1>
+      <p>Add a battery or accessory to get started.</p>
+      <a href="/#best-sellers" class="btn btn-grad">Shop batteries</a>
+    </section>
+
+    <!-- Confirmation -->
+    <section class="co-done" data-done hidden>
+      <div class="co-done-icon"><svg viewBox="0 0 24 24"><path d="m5 12 5 5 9-10"/></svg></div>
+      <h1>Thanks, <span data-done-name></span></h1>
+      <p>Your order reference is <strong data-done-ref></strong>.</p>
+      <p class="co-notice">Online payments aren't live yet, so this order hasn't been charged or placed. Call <a href="tel:1800117177">1800 117 177</a> and quote your reference — our team will confirm stock, delivery and installation and take payment over the phone.</p>
+      <a href="/" class="btn btn-grad">Back to shop</a>
+    </section>
+
+    <div class="co-grid" data-checkout-grid>
+      <!-- Form -->
+      <form class="co-form" data-form novalidate>
+        <fieldset class="co-step">
+          <legend><span class="num">1</span>Contact</legend>
+          <div class="field-row">
+            <label class="field"><span>Email</span><input type="email" name="email" autocomplete="email" required></label>
+            <label class="field"><span>Mobile</span><input type="tel" name="phone" autocomplete="tel" required pattern="[0-9 +()]{8,}"></label>
+          </div>
+          <label class="check"><input type="checkbox" name="news" checked> Email me battery tips, launches and rebate updates</label>
+        </fieldset>
+
+        <fieldset class="co-step">
+          <legend><span class="num">2</span>Delivery address</legend>
+          <div class="field-row">
+            <label class="field"><span>First name</span><input name="first" autocomplete="given-name" required></label>
+            <label class="field"><span>Last name</span><input name="last" autocomplete="family-name" required></label>
+          </div>
+          <label class="field"><span>Street address</span><input name="address" autocomplete="street-address" required></label>
+          <div class="field-row three">
+            <label class="field"><span>Suburb</span><input name="suburb" autocomplete="address-level2" required></label>
+            <label class="field"><span>State</span>
+              <select name="state" autocomplete="address-level1" required>
+                <option value="">Select</option><option>NSW</option><option>QLD</option><option>SA</option><option>ACT</option><option>VIC</option><option>TAS</option><option>WA</option><option>NT</option>
+              </select>
+            </label>
+            <label class="field"><span>Postcode</span><input name="postcode" inputmode="numeric" autocomplete="postal-code" required pattern="\d{4}" maxlength="4"></label>
+          </div>
+          <p class="hint" data-state-hint hidden>Installation is available in NSW, QLD &amp; SA. Outside these states we can supply and deliver only.</p>
+        </fieldset>
+
+        <fieldset class="co-step">
+          <legend><span class="num">3</span>Delivery &amp; installation</legend>
+          <div class="options" data-fulfil>
+            <label class="option">
+              <input type="radio" name="fulfil" value="install" checked>
+              <span class="opt-body"><strong>Supply &amp; install by Cable Co</strong><small>Licensed electricians. Installation is quoted after a free site assessment.</small></span>
+              <span class="opt-price">Quote</span>
+            </label>
+            <label class="option">
+              <input type="radio" name="fulfil" value="deliver">
+              <span class="opt-body"><strong>Delivery only</strong><small>Delivered to your address in 3–7 business days.</small></span>
+              <span class="opt-price">$149</span>
+            </label>
+            <label class="option">
+              <input type="radio" name="fulfil" value="collect">
+              <span class="opt-body"><strong>Click &amp; collect</strong><small>Pick up from a Cable Co office.</small></span>
+              <span class="opt-price">Free</span>
+            </label>
+          </div>
+          <label class="field" data-office hidden><span>Collection office</span>
+            <select name="office">
+              <option>237 Military Rd, Cremorne NSW 2090</option>
+              <option>1 Tudor St, Newcastle West NSW 2302</option>
+              <option>194 Varsity Parade, Varsity Lakes QLD 4227</option>
+              <option>217 Flinders St, Adelaide SA 5000</option>
+            </select>
+          </label>
+          <label class="field"><span>Notes for our team <em>(optional)</em></span><textarea name="notes" rows="3" placeholder="e.g. existing solar system size, switchboard location, access details"></textarea></label>
+        </fieldset>
+
+        <fieldset class="co-step">
+          <legend><span class="num">4</span>Payment</legend>
+          <div class="options">
+            <label class="option">
+              <input type="radio" name="pay" value="card" checked>
+              <span class="opt-body"><strong>Credit or debit card</strong><small>Visa, Mastercard, Amex</small></span>
+              <span class="opt-icons"><svg viewBox="0 0 24 24"><rect x="2" y="5" width="20" height="14" rx="2"/><path d="M2 10h20"/></svg></span>
+            </label>
+            <label class="option">
+              <input type="radio" name="pay" value="bnpl">
+              <span class="opt-body"><strong>Buy now, pay later</strong><small>Split your purchase into instalments</small></span>
+            </label>
+            <label class="option">
+              <input type="radio" name="pay" value="bank">
+              <span class="opt-body"><strong>Bank transfer</strong><small>Details sent with your order confirmation</small></span>
+            </label>
+          </div>
+          <div class="pay-box">
+            <svg viewBox="0 0 24 24"><rect x="5" y="11" width="14" height="10" rx="2"/><path d="M8 11V8a4 4 0 0 1 8 0v3"/></svg>
+            <p>Card details will be entered in the payment provider's secure form once online payments go live. Cable Co never stores your card number.</p>
+          </div>
+        </fieldset>
+
+        <label class="check terms"><input type="checkbox" name="terms" required> <span>I agree to the <a href="#">Terms</a> and <a href="#">Shipping &amp; Returns</a> policy</span></label>
+        <p class="form-error" data-error hidden>Please complete the highlighted fields.</p>
+        <button type="submit" class="btn btn-grad btn-block btn-lg">Place order · <span data-total-btn>$0</span></button>
+      </form>
+
+      <!-- Summary -->
+      <aside class="co-summary">
+        <h2>Order summary</h2>
+        <div class="co-lines" data-lines></div>
+        <form class="promo-code" data-promo>
+          <input name="code" placeholder="Discount code" aria-label="Discount code">
+          <button class="btn btn-sm btn-navy" type="submit">Apply</button>
+        </form>
+        <p class="hint" data-promo-msg hidden></p>
+        <dl class="totals">
+          <div><dt>Subtotal</dt><dd data-subtotal>$0</dd></div>
+          <div><dt>Delivery</dt><dd data-delivery>—</dd></div>
+          <div><dt>Installation</dt><dd data-install>Quoted after assessment</dd></div>
+          <div class="grand"><dt>Total</dt><dd data-total>$0</dd></div>
+          <div class="gst"><dt>Includes GST of</dt><dd data-gst>$0</dd></div>
+        </dl>
+        <ul class="co-trust">
+          <li>Licensed in NSW, QLD &amp; SA</li>
+          <li>24/7 emergency service available</li>
+          <li>Questions? Call <a href="tel:1800117177">1800 117 177</a></li>
+        </ul>
+      </aside>
+    </div>
+  </main>
+
+  <footer class="co-footer">
+    <div class="container">© <span data-year>2026</span> Cable Co Pty Ltd · <a href="#">Privacy Policy</a> · <a href="#">Terms</a> · <a href="#">Shipping &amp; Returns</a></div>
+  </footer>
+
+  <script src="/assets/js/products.js"></script>
+  <script src="/assets/js/checkout.js"></script>
+</body>
+</html>

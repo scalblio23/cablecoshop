@@ -46,7 +46,7 @@
 
   const projects = [
     { title: "10.2kWh battery retrofit · Newcastle NSW", product: "pc-10", bg: "#ece6f4" },
-    { title: "Hybrid inverter + 13.5kWh · Gold Coast QLD", product: "pc-135", bg: "#fde8ee" },
+    { title: "Hybrid inverter + 13.5kWh · Gold Coast QLD", product: "pc-135", bg: "#e4e8f3" },
     { title: "7kW EV charger install · Adelaide SA", product: "ev-7", bg: "#e7eef9" }
   ];
   $("[data-projects]").innerHTML = projects.map((pr, i) => {
@@ -120,7 +120,7 @@
     if (rm) { cart = cart.filter(i => i.id !== rm.dataset.remove); save(); renderCart(); return; }
     if (e.target.closest("[data-cart-open]")) { openCart(); return; }
     if (e.target.closest("[data-cart-close]")) { closeCart(); return; }
-    if (e.target.closest("[data-checkout]")) { $("[data-checkout-note]").hidden = false; return; }
+    if (e.target.closest("[data-checkout]")) { location.href = "/checkout"; return; }
     if (e.target.closest("[data-menu-toggle]")) { document.body.classList.toggle("menu-open"); return; }
     if (e.target.closest("[data-menu] a")) document.body.classList.remove("menu-open");
   });

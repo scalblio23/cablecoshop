@@ -5,26 +5,26 @@
  */
 window.CATEGORIES = [
   { id: "batteries",  name: "Home Batteries",    art: "battery",  tint: "#efe9f7" },
-  { id: "inverters",  name: "Hybrid Inverters",  art: "inverter", tint: "#fde8ee" },
+  { id: "inverters",  name: "Hybrid Inverters",  art: "inverter", tint: "#e4e8f3" },
   { id: "ev",         name: "EV Charging",       art: "charger",  tint: "#e7eef9" },
   { id: "monitoring", name: "Monitoring",        art: "meter",    tint: "#f3e9f5" },
   { id: "backup",     name: "Backup & Safety",   art: "gateway",  tint: "#eaf0f3" },
-  { id: "mounting",   name: "Cables & Mounting", art: "cable",    tint: "#fbeef0" }
+  { id: "mounting",   name: "Cables & Mounting", art: "cable",    tint: "#e9e6f3" }
 ];
 
 window.PRODUCTS = [
   { id: "pc-5",    cat: "batteries",  name: "PowerCell 5 Home Battery – 5.1kWh",          price: 4290,  rating: 5, reviews: 18, art: "battery",  color: "#e9e3f3", tags: ["best", "5"] },
-  { id: "pc-10",   cat: "batteries",  name: "PowerCell 10 Home Battery – 10.2kWh",        price: 7490,  was: 8190, rating: 5, reviews: 42, art: "battery", color: "#f6dfe6", tags: ["best", "trend", "10"], badge: "Sale" },
+  { id: "pc-10",   cat: "batteries",  name: "PowerCell 10 Home Battery – 10.2kWh",        price: 7490,  was: 8190, rating: 5, reviews: 42, art: "battery", color: "#e2ddf0", tags: ["best", "trend", "10"], badge: "Sale" },
   { id: "pc-135",  cat: "batteries",  name: "PowerCell 13.5 Whole-Home Battery",          price: 9890,  rating: 5, reviews: 27, art: "battery",  color: "#dfe6f2", tags: ["best", "13.5"] },
   { id: "ps-mod",  cat: "batteries",  name: "PowerStack Modular Battery – 15 to 30kWh",   price: 11990, from: true, rating: 4, reviews: 9, art: "stack", color: "#e6e1ef", tags: ["trend", "15", "20", "30"], badge: "New" },
-  { id: "inv-5",   cat: "inverters",  name: "Hybrid Inverter 5kW – Single Phase",         price: 2190,  rating: 5, reviews: 21, art: "inverter", color: "#f2e4ea", tags: ["best"] },
+  { id: "inv-5",   cat: "inverters",  name: "Hybrid Inverter 5kW – Single Phase",         price: 2190,  rating: 5, reviews: 21, art: "inverter", color: "#e6e3f1", tags: ["best"] },
   { id: "inv-10",  cat: "inverters",  name: "Hybrid Inverter 10kW – Three Phase",         price: 3690,  rating: 4, reviews: 11, art: "inverter", color: "#e3e9f1", tags: ["trend"] },
   { id: "ev-7",    cat: "ev",         name: "Smart EV Charger 7kW – Tethered",            price: 1290,  rating: 5, reviews: 33, art: "charger",  color: "#e6ecf6", tags: ["best", "trend"] },
   { id: "mon-1",   cat: "monitoring", name: "Smart Energy Monitor + App",                 price: 349,   rating: 5, reviews: 56, art: "meter",    color: "#efe6f4", tags: ["trend"] },
   { id: "gw-1",    cat: "backup",     name: "Backup Gateway – Blackout Protection",       price: 1190,  rating: 5, reviews: 14, art: "gateway",  color: "#e5edf1", tags: ["best"] },
-  { id: "iso-kit", cat: "backup",     name: "DC Isolator & Surge Protection Kit",         price: 189,   rating: 4, reviews: 8,  art: "isolator", color: "#f7e6ea", tags: ["trend"] },
+  { id: "iso-kit", cat: "backup",     name: "DC Isolator & Surge Protection Kit",         price: 189,   rating: 4, reviews: 8,  art: "isolator", color: "#e4e9f2", tags: ["trend"] },
   { id: "mnt-kit", cat: "mounting",   name: "Battery Wall Mount & Bollard Kit",           price: 249,   rating: 5, reviews: 12, art: "bracket",  color: "#ebe7f1", tags: [] },
-  { id: "cbl-6",   cat: "mounting",   name: "Solar DC Cable 6mm² – 100m Roll",            price: 229,   rating: 5, reviews: 19, art: "cable",    color: "#f3e5ec", tags: ["trend"] },
+  { id: "cbl-6",   cat: "mounting",   name: "Solar DC Cable 6mm² – 100m Roll",            price: 229,   rating: 5, reviews: 19, art: "cable",    color: "#ebe6f4", tags: ["trend"] },
   { id: "enc-1",   cat: "backup",     name: "Weatherproof Battery Enclosure",             price: 890,   rating: 4, reviews: 6,  art: "enclosure",color: "#e2e8ef", tags: [] }
 ];
 
@@ -32,14 +32,14 @@ window.CAPACITIES = [
   { label: "5kWh",   tag: "5",    shade: "#cfc3e6" },
   { label: "10kWh",  tag: "10",   shade: "#b39ad6" },
   { label: "13.5kWh",tag: "13.5", shade: "#9a78c6" },
-  { label: "15kWh",  tag: "15",   shade: "#c56aa3" },
-  { label: "20kWh",  tag: "20",   shade: "#dc5585" },
-  { label: "30kWh+", tag: "30",   shade: "#e8456b" }
+  { label: "15kWh",  tag: "15",   shade: "#7a5cae" },
+  { label: "20kWh",  tag: "20",   shade: "#4f3f86" },
+  { label: "30kWh+", tag: "30",   shade: "#16243f" }
 ];
 
 /* Inline SVG product illustrations — stand-ins until real product photography is supplied. */
 window.productArt = function (type, bg) {
-  const navy = "#16243f", purple = "#6b4c9a", pink = "#e8456b";
+  const navy = "#16243f", purple = "#6b4c9a", pink = "#9b6fd6";
   const grad = `<defs><linearGradient id="g-${type}" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="${purple}"/><stop offset="1" stop-color="${pink}"/></linearGradient></defs>`;
   const shadow = `<ellipse cx="100" cy="182" rx="56" ry="7" fill="${navy}" opacity=".08"/>`;
   const g = `url(#g-${type})`;
